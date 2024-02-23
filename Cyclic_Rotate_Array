@@ -1,0 +1,30 @@
+package cyclic_rotate_array;
+import java.util.Scanner;
+public class Cyclic_Rotate_Array {
+
+	public static void main(String[] args) {
+		int i,n;
+		int a[]=new int[20];
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter number of elements in 1_D array");
+		n=sc.nextInt();
+		System.out.println("Enter those" +n+ "elements");
+		for(i=0;i<n;i++) {
+			a[i]=sc.nextInt();
+		}
+		int last=a[n-1];
+		for(i=n;i>0;i--) {
+			a[i]=a[i-1];
+		}
+		a[0]=last;
+		for(i=0;i<n;i++) {
+			System.out.println(a[i]);
+	
+		}
+		
+		
+		
+
+	}
+
+}
